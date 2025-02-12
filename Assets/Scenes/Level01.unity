@@ -906,7 +906,8 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: 6f96c9c398258834591d34e2ee970f0d,
     type: 2}
   m_MaxNumberOfMovingImages: 0
-  m_TrackedImagePrefab: {fileID: 0}
+  m_TrackedImagePrefab: {fileID: 8345921994270186058, guid: b10a9db42e56fae4bbaec2b508eb6b25,
+    type: 3}
 --- !u!114 &309492069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1687,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1165465513}
   m_Father: {fileID: 2054787121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &928241752
@@ -2326,7 +2328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2054787121}
+  m_Father: {fileID: 928241751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166958850
 GameObject:
@@ -3059,7 +3061,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 928241751}
-  - {fileID: 1165465513}
   m_Father: {fileID: 309492067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085753772
