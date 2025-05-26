@@ -174,7 +174,7 @@ public class EnemyAI : MonoBehaviour
         // Retirer ce drone de la liste des drones
         allDrones.Remove(this);
         // Rajouter une animation d'explosion 
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 0.5f);
     }
 
     // Fonction pour cloner le drone

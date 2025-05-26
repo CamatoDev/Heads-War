@@ -128,10 +128,10 @@ MonoBehaviour:
   orbitDistance: 5
   orbitSpeed: 3
   heightVariationSpeed: 1
-  heightVariationRange: 2
+  heightVariationRange: 3
   coin: 100
   startHealth: 0
-  cloneCooldown: 5
+  cloneCooldown: 3
   dronePrefab: {fileID: 8345921994270186058}
   cloneSpawnDistance: 3
-  maxDrones: 12
+  maxDrones: 25
