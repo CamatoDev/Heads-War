@@ -61,9 +61,14 @@ public class Bullet : MonoBehaviour
     void Damage(Transform enemy)
     {
         EnemyAI e = enemy.GetComponent<EnemyAI>();
+        FinalEnemyAI fe = enemy.GetComponent<FinalEnemyAI>();
         if (e != null)
         {
             e.Damage(damage);
+        }
+        if (fe != null)
+        {
+            fe.Damage(damage);
         }
         else
         {

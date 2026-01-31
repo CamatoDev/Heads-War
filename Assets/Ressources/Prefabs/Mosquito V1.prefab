@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 837763634360195867}
   - component: {fileID: 980954454554598577}
   - component: {fileID: 366397202773440682}
-  - component: {fileID: 7754661513027496857}
+  - component: {fileID: 3339389090878011979}
+  - component: {fileID: 6498498782644318977}
   m_Layer: 0
   m_Name: Mosquito V1
   m_TagString: Enemy
@@ -30,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 978.6019, y: 0, z: 693.9699}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 150, y: 150, z: 150}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -107,7 +108,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1445275707725226926, guid: 2b0a6657b0899454199d6d1afe6ba9a6, type: 3}
---- !u!114 &7754661513027496857
+--- !u!114 &3339389090878011979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,22 +117,122 @@ MonoBehaviour:
   m_GameObject: {fileID: 9068920526188899581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2f9a78cd61f2a45a4a15522311d75f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f71f56e153eef94da65d26efde88f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   explosionRadius: 2
   moveSpeed: 5
   distanceMax: 40
-  chaseRange: 10
-  attackRange: 1
   orbitDistance: 5
   orbitSpeed: 3
   heightVariationSpeed: 1
   heightVariationRange: 3
-  coin: 100
-  startHealth: 0
-  cloneCooldown: 3
+  timeBetweenAttack: 8
+  chaseRange: 10
+  attackRange: 1
+  coin: 250
+  startHealth: 300
+  cloneCooldown: 1
   dronePrefab: {fileID: 9068920526188899581}
-  cloneSpawnDistance: 3
-  maxDrones: 25
+  cloneSpawnDistance: 5
+  maxDrones: 2
+  audioSource: {fileID: 6498498782644318977}
+  enemyDie: {fileID: 8300000, guid: 41544fb872d9fe947bfed48822084efc, type: 3}
+  enemySpawn: {fileID: 8300000, guid: 717ca216998a8134086822d3fab18338, type: 3}
+--- !u!82 &6498498782644318977
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068920526188899581}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

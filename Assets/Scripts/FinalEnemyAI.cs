@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class FinalEnemyAI : MonoBehaviour
 {
     // Variables de la cible 
     public Transform target;
     //Rayon de l'explosion
-    public float explosionRadius = 0.5f;
+    public float explosionRadius = 2.0f;
 
     // Variables pour le déplacement
     [Header("Enemy mouvement")]
     public float moveSpeed = 5.0f;
     public float distanceMax = 40.0f;
     public float orbitDistance = 5.0f; // Distance à laquelle le drone orbite autour du joueur
-    public float orbitSpeed = 2.0f; // Vitesse à laquelle le drone orbite autour du joueur
+    public float orbitSpeed = 3.0f; // Vitesse à laquelle le drone orbite autour du joueur
     public float heightVariationSpeed = 1.0f; // Vitesse de variation de la hauteur
-    public float heightVariationRange = 2.0f; // Amplitude de la variation de hauteur
+    public float heightVariationRange = 3.0f; // Amplitude de la variation de hauteur
     //Distance entre le joueur et l'ennemi
     private float distance;
 
@@ -28,23 +28,24 @@ public class EnemyAI : MonoBehaviour
     bool onAttack = false;
 
     [Header("Enemy Stats")]
-    public float coin = 100f;
+    public float coin = 250f;
     //Pour la vie de l'ennemi 
-    public float startHealth = 100;
+    public float startHealth = 300f;
     private float health;
 
     [Header("Clone Option")]
     // Variables pour le dédoublement
-    public float cloneCooldown = 5.0f; // Temps entre chaque dédoublement
+    public float cloneCooldown = 1.0f; // Temps entre chaque dédoublement
     private float cloneTimer = 0.0f;
     public GameObject dronePrefab; // Préfabriqué du drone à cloner
-    public float cloneSpawnDistance = 3.0f; // Distance minimale entre le clone et l'objet de référence
-    public int maxDrones = 12; // Nombre maximum de drones autorisés
+    public float cloneSpawnDistance = 5.0f; // Distance minimale entre le clone et l'objet de référence
+    public int maxDrones = 2; // Nombre maximum de drones autorisés
 
     [Header("Song")]
     // Variable pour le son
     public AudioSource audioSource;
     public AudioClip enemyDie;
+    public AudioClip enemySpawn;
 
     // Variables pour la variation de hauteur
     private float baseHeight;
@@ -52,7 +53,7 @@ public class EnemyAI : MonoBehaviour
     private float heightTimer;
 
     // Liste statique pour garder une trace de tous les drones
-    private static List<EnemyAI> allDrones = new List<EnemyAI>();
+    private static List<FinalEnemyAI> allFinalDrones = new List<FinalEnemyAI>();
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +69,7 @@ public class EnemyAI : MonoBehaviour
         heightTimer = 0.0f;
 
         // Ajouter ce drone à la liste des drones
-        allDrones.Add(this);
+        allFinalDrones.Add(this);
     }
 
     // Update is called once per frame
@@ -102,12 +103,12 @@ public class EnemyAI : MonoBehaviour
         cloneTimer -= Time.deltaTime;
         if (cloneTimer <= 0)
         {
-            if (allDrones.Count < maxDrones)
+            if (allFinalDrones.Count < maxDrones)
             {
                 CloneDrone();
             }
             // Ajuster dynamiquement le cooldown en fonction du nombre de drones
-            cloneTimer = cloneCooldown * (1 + (allDrones.Count / (float)maxDrones));
+            cloneTimer = cloneCooldown * (1 + (allFinalDrones.Count / (float)maxDrones));
         }
 
         //Gestion de l'attaque
@@ -186,6 +187,7 @@ public class EnemyAI : MonoBehaviour
     public void Damage(float damage)
     {
         health -= damage;
+        audioSource.PlayOneShot(enemyDie);
 
         if (health <= 0)
         {
@@ -197,8 +199,9 @@ public class EnemyAI : MonoBehaviour
     {
         target.gameObject.GetComponent<PlayerStats>().points += coin;
         // Retirer ce drone de la liste des drones
-        allDrones.Remove(this);
+        allFinalDrones.Remove(this);
         // Rajouter une animation d'explosion 
+
         audioSource.PlayOneShot(enemyDie);
         Destroy(gameObject, 0.5f);
     }
@@ -223,6 +226,6 @@ public class EnemyAI : MonoBehaviour
     // Fonction pour nettoyer la liste des drones (au cas où)
     private void OnDestroy()
     {
-        allDrones.Remove(this);
+        allFinalDrones.Remove(this);
     }
 }

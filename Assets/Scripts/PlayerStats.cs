@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
 
     [Header("UI")]
     public Text score;
-    //public Image health;
+    public Image health;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,6 @@ public class PlayerStats : MonoBehaviour
     {
         score.text = ": " + points;
 
-        //health.fillAmount = currentHealth / startHealth;
+        health.fillAmount = currentHealth / startHealth;
     }
 }

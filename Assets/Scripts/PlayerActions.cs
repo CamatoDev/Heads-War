@@ -9,7 +9,8 @@ public class PlayerActions : MonoBehaviour
     private PlayerStats playerStats;
     public GameManager gameManager;
     public Button shootButton;
-    public AudioSource audioSource;
+    public AudioSource buttonaudioSource;
+    public AudioSource flyingMosquitoAudioSource;
 
 
     [Header("Shoot Action")]
@@ -35,6 +36,7 @@ public class PlayerActions : MonoBehaviour
         else
         {
             shootButton.interactable = true;
+            //flyingMosquitoAudioSource.Play();
         }
     }
     public void Shoot()
@@ -47,7 +49,7 @@ public class PlayerActions : MonoBehaviour
         }
 
         shootCountdown -= 10;
-        audioSource.Play();
+        buttonaudioSource.Play();
 
         StartCoroutine(ShootColdDown());
     }
