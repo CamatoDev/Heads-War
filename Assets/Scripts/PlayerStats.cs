@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score : " + points;
+        score.text = ": " + points;
 
         //health.fillAmount = currentHealth / startHealth;
     }

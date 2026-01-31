@@ -270,15 +270,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32276964, g: 0.4757211, b: 0.78113204, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87ea2079a91b3e74f84b5cb700abb4d6, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71f82b455b6ef9c4bb28761af9f86b5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -340,8 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596af012ebd6ac64e8fa5e9d4fd4f79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muteImage: {fileID: 21300000, guid: f541cd065ce8e724fb8cac32224604b2, type: 3}
-  unmuteImage: {fileID: 21300000, guid: 20e906854b4c38c46935e8681f0a3a09, type: 3}
+  muteImage: {fileID: 21300000, guid: 240a6320005158a47a54eab1650f7e8e, type: 3}
+  unmuteImage: {fileID: 21300000, guid: 074340e3ae824374fafff55c8eeed40c, type: 3}
   soundButton: {fileID: 2090122204}
   buttonAudioSource: {fileID: 1425794475}
   levelToLoad: Level01
@@ -477,7 +477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.012012, y: -530.36}
+  m_AnchoredPosition: {x: 0.000011926, y: -789.04}
   m_SizeDelta: {x: 1080, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517461033
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.87155926, b: 0, a: 1}
+  m_Color: {r: 0.8792453, g: 0.7278226, b: 0.29031673, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -513,9 +513,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HEADS WAR
+  m_Text: 'EH OH
 
-    REMAKE'
+    MOSQUITOES'
 --- !u!222 &517461034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1026,10 +1026,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 326345399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.74588895, y: 0.8525187}
+  m_AnchorMin: {x: 0.6987223, y: 0.80100006}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47, y: -67.5}
-  m_SizeDelta: {x: -94, y: -135}
+  m_AnchoredPosition: {x: 0, y: -134.83813}
+  m_SizeDelta: {x: 0, y: -269.676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563026195
 MonoBehaviour:
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85f4c92e01b4baa4bb07bfd13c9f08f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0f739589437a8a4ab43b4c1feed2d91, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1547,7 +1547,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062653996
 MonoBehaviour:
@@ -1625,7 +1625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43df9310562af0a4dbcd31424f81b35f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1df95f675d9edd4b957ce879acf9a0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1676,10 +1676,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 326345399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8525187}
-  m_AnchorMax: {x: 0.2492593, y: 1}
-  m_AnchoredPosition: {x: 44.5, y: -68.5}
-  m_SizeDelta: {x: -89, y: -137}
+  m_AnchorMin: {x: 0, y: 0.76000005}
+  m_AnchorMax: {x: 0.2971111, y: 1}
+  m_AnchoredPosition: {x: 22.2202, y: -74.15796}
+  m_SizeDelta: {x: -44.4403, y: -163.0502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090122204
 MonoBehaviour:
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20e906854b4c38c46935e8681f0a3a09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 074340e3ae824374fafff55c8eeed40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
