@@ -216,7 +216,7 @@ public class EnemyAI : MonoBehaviour
             } while (Vector3.Distance(spawnPosition, transform.position) < cloneSpawnDistance);
 
             // Instancier le clone
-            Instantiate(dronePrefab, spawnPosition, Quaternion.identity);
+            GameObject droneGO = (GameObject)Instantiate(dronePrefab, spawnPosition, Quaternion.identity);
         }
     }
 
